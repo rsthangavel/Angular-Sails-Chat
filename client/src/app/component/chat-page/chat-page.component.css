@@ -1,0 +1,12 @@
+.main-card{
+    width:70%;
+    height:92vh;
+      -webkit-box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    float:left;
+   
+}
+.break { 
+   box-shadow: 0px 2px 5px 1px #555;
+}

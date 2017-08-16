@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin:0;
+    background: -webkit-radial-gradient(10% 0, farthest-side ellipse, #7392c2 20%, rgba(103, 58, 183, 0.5)) no-repeat;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';

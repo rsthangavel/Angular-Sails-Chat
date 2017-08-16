@@ -1,0 +1,57 @@
+
+<div class="row" *ngIf="switchView">
+<md-card>
+  <form [formGroup]="login" (ngSubmit)="formSubmit(login.value,login.valid, 'login')">
+  <md-card-title style="margin:auto 44%;">Login</md-card-title>
+  <div class="row">
+  <md-input-container class="col-md-12 col-ls-12">
+  <input mdInput placeholder="Email"  formControlName="email" >
+</md-input-container>
+  </div>
+  <div class="row">
+ <md-input-container  class="col-md-12">
+  <input mdInput type="password" placeholder="Pasword" formControlName="password">
+</md-input-container>
+  </div>
+  <div class="row">
+<button type="submit" md-raised-button color="primary" class="button">Login</button>
+  </div>
+</form>
+</md-card>
+</div>
+
+
+<div class="row" *ngIf="!switchView">
+<md-card>
+  <form [formGroup]="register" (ngSubmit)="formSubmit(register.value,register.valid, 'register')">
+  <md-card-title style="margin:auto 44%;">Register</md-card-title>
+  <div class="row">
+  <md-input-container class="col-md-12 col-ls-12">
+  <input mdInput placeholder="Email"  formControlName="email" >
+</md-input-container>
+  </div>
+  <div class="row" formGroupName="passwordGroup">
+ <md-input-container  class="col-md-12">
+  <input mdInput type="password" placeholder="Pasword" formControlName="password">
+</md-input-container>
+ <md-input-container  class="col-md-12">
+  <input mdInput type="password" placeholder="Confirm Pasword" formControlName="confirmPassword">
+</md-input-container>
+  </div>
+  <div class="row">
+    <md-input-container  class="col-md-12">
+  <input mdInput [mdDatepicker]="picker" placeholder="DOB" formControlName="BirthDay">
+  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+</md-input-container>
+<md-datepicker #picker></md-datepicker>
+  </div>
+    <div class="row">
+<button type="submit" md-raised-button color="primary" class="button">Register</button>
+  </div>
+</form>
+</md-card>
+</div>
+
+  <button md-button color="primary" *ngIf ='switchView' (click)="switchView = !switchView" class="button" style="margin: 25px auto;">Signup</button>
+
+  <button md-button color="primary" *ngIf ='!switchView' (click)="switchView = !switchView" class="button" style="margin: 25px auto;">login</button>

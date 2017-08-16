@@ -1,0 +1,13 @@
+.mat-card{
+    margin: 10% 0 0 30%;
+    width: 35%;
+    /*border:2px dotted #673ab7;*/
+    -webkit-box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    box-shadow: 2px 2px 26px 5px rgba(0,0,0,0.75) !important;
+    border-radius: 10px;
+}
+.button{
+    display: block;
+    margin : 0 auto;
+}
